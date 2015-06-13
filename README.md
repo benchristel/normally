@@ -2,7 +2,7 @@
 
 ## Prioritizing the Happy Path
 
-Much of the time when talking about conditional expressions, the concepts of a _happy path_ and a _sad path_ are useful. The happy path is the branch of the conditional that executes during the normal operation of your program. The sad path is there only to deal with errors or invalid input. When test-driving code, I normally focus on the happy path first. When reading code, I like to see the happy path first because the happy path tells me what the code is supposed to do, while the sad path just tells me how the code avoids doing things it's not supposed to do.
+Much of the time when talking about conditional expressions, the concepts of a _happy path_ and a _sad path_ are useful. The happy path is the branch of the conditional that executes during the normal operation of your program. The sad path is there only to deal with errors or invalid input. When reading code, I like to see the happy path first because the happy path tells me what the code is supposed to do, while the sad path just tells me how the code avoids doing things it's not supposed to do.
 
 Despite the importance of the happy path, the sad path is often the most visible in code with conditionals. Consider the following:
 
@@ -37,7 +37,7 @@ You know the drill. If you're using [bundler](https://rubygems.org/gems/bundler)
 gem 'normally'
 ```
 
-To install globally, do `gem install normally`
+To install globally, run `gem install normally`.
 
 The `normally` method is part of the `Normally` module, which must be included either in the global namespace or in the class where you want to use the `normally` syntax. For example:
 
