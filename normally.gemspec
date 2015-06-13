@@ -1,6 +1,6 @@
 $LOAD_PATH.unshift File.expand_path("../lib", __FILE__)
 
-NORMALLY_VERSION = '0.0.0'
+NORMALLY_VERSION = '0.0.1'
 
 Gem::Specification.new do |s|
   s.name        = "normally"
