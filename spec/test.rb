@@ -5,7 +5,7 @@ require_relative '../lib/normally'
 include Normally
 
 class TestNormally < Minitest::Test
-  def test_normally_block_executes_when_but_if_condition_is_false
+  def test_happy_path
     math_makes_sense = nil
 
     normally {
@@ -17,7 +17,7 @@ class TestNormally < Minitest::Test
     assert_equal true, math_makes_sense
   end
 
-  def test_but_if_block_executes_when_but_if_condition_is_true
+  def test_sad_path
     clouds = 10
     rain_likely = nil
 
@@ -55,14 +55,14 @@ class TestNormally < Minitest::Test
     assert_equal false, game_over
   end
 
-  def test_in_the_happy_case_return_the_value_of_the_normally_block
+  def test_returning_a_value_from_happy_path
     math_makes_sense = normally { true }
       .but_if (2 + 2 == 5) { false }
 
     assert_equal true, math_makes_sense
   end
 
-  def test_in_the_sad_case_return_the_value_of_the_but_if_block
+  def test_returning_a_value_from_sad_path
     hours_slept = 5
 
     math_test_grade = normally { 'A' }
