@@ -2,6 +2,8 @@ gem 'minitest'
 require 'minitest/autorun'
 require_relative '../lib/normally'
 
+include Normally
+
 class TestNormally < Minitest::Test
   def test_normally_block_executes_when_but_if_condition_is_false
     math_makes_sense = nil

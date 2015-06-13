@@ -8,7 +8,7 @@ class HappyPath
   end
 end
 
-module Kernel
+module Normally
   def normally(&block)
     HappyPath.new(block)
   end
